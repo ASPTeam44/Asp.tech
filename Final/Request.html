@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request a Quote - Asp Innovation</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#2563eb',secondary:'#1e40af'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body { font-family: 'Inter', sans-serif; }
+.progress-step.active { background-color: #2563eb; color: white; }
+.progress-step.completed { background-color: #10b981; color: white; }
+.progress-line.active { background-color: #2563eb; }
+.file-drop-zone { border: 2px dashed #d1d5db; transition: all 0.3s ease; }
+.file-drop-zone.dragover { border-color: #2563eb; background-color: #eff6ff; }
+.custom-radio { appearance: none; width: 1.25rem; height: 1.25rem; border: 2px solid #d1d5db; border-radius: 50%; position: relative; cursor: pointer; }
+.custom-radio:checked { border-color: #2563eb; background-color: #2563eb; }
+.custom-radio:checked::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 0.5rem; height: 0.5rem; background-color: white; border-radius: 50%; }
+.custom-checkbox { appearance: none; width: 1.25rem; height: 1.25rem; border: 2px solid #d1d5db; border-radius: 0.25rem; position: relative; cursor: pointer; }
+.custom-checkbox:checked { border-color: #2563eb; background-color: #2563eb; }
+.custom-checkbox:checked::after { content: '✓'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 0.875rem; font-weight: bold; }
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Header -->
+<header class="bg-white shadow-sm border-b">
+<nav class="w-full px-6 py-4">
+<div class="max-w-4xl mx-auto flex items-center justify-between">
+<div class="flex items-center space-x-4">
+<a href="index.html" data-readdy="true" class="w-10 h-10 flex items-center justify-center text-primary hover:bg-gray-100 rounded-lg transition-colors">
+<i class="ri-arrow-left-line text-xl"></i>
+</a>
+<div class="flex items-center space-x-2">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+<i class="ri-code-s-slash-line text-white text-lg"></i>
+</div>
+<span class="text-xl font-bold text-gray-900">Asp Innovations</span>
+</div>
+</div>
+<div class="text-sm text-gray-600">
+Need help? Call us at <span class="font-medium text-primary">+91 9369991272</span>
+</div>
+</div>
+</nav>
+</header>
+<!-- Progress Indicator -->
+<div class="bg-white border-b">
+<div class="max-w-4xl mx-auto px-6 py-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-4">
+<div class="progress-step active w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold">1</div>
+<div class="progress-line w-16 h-1 bg-gray-200 rounded"></div>
+<div class="progress-step w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-sm font-semibold text-gray-500">2</div>
+<div class="progress-line w-16 h-1 bg-gray-200 rounded"></div>
+<div class="progress-step w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-sm font-semibold text-gray-500">3</div>
+</div>
+<div class="text-sm text-gray-600">
+Step <span id="current-step">1</span> of 3
+</div>
+</div>
+<div class="mt-4">
+<div class="text-sm font-medium text-gray-900" id="step-title">Contact Information</div>
+<div class="text-sm text-gray-600" id="step-description">Tell us how to reach you</div>
+</div>
+</div>
+</div>
+<!-- Main Content -->
+<main class="max-w-4xl mx-auto px-6 py-8">
+<div class="bg-white rounded-xl shadow-sm border">
+<div class="p-8">
+<div class="mb-8">
+<h1 class="text-3xl font-bold text-gray-900 mb-2">Request a Quote</h1>
+<p class="text-lg text-gray-600">Get a personalized proposal for your digital project. Our team will review your requirements and provide a detailed estimate within 24-48 hours.</p>
+</div>
+<!-- Response Time Notice -->
+<div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8">
+<div class="flex items-start space-x-3">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-time-line text-blue-600"></i>
+</div>
+<div>
+<h3 class="font-semibold text-blue-900 mb-1">Quick Response Guaranteed</h3>
+<p class="text-sm text-blue-700">We typically respond within 24-48 hours during business hours (Mon-Fri, 9 AM - 6 PM EST). For urgent requests, please call us directly.</p>
+</div>
+</div>
+</div>
+<form id="quote-form" class="space-y-8">
+<!-- Step 1: Contact Information -->
+<div id="step-1" class="form-step">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">
+Full Name <span class="text-red-500">*</span>
+</label>
+<input type="text" id="full-name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm" placeholder="Enter your full name">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">
+Email Address <span class="text-red-500">*</span>
+</label>
+<input type="email" id="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm" placeholder="your.email@example.com">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+<input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm" placeholder="+1 (555) 123-4567">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Company Name</label>
+<input type="text" id="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm" placeholder="Your company name">
+</div>
+</div>
+</div>
+<!-- Step 2: Project Requirements -->
+<div id="step-2" class="form-step hidden">
+<div class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-3">
+Service Type <span class="text-red-500">*</span>
+</label>
+<div class="relative">
+<button type="button" id="service-dropdown" class="w-full px-4 py-3 border border-gray-300 rounded-lg text-left bg-white flex items-center justify-between text-sm focus:ring-2 focus:ring-primary focus:border-transparent">
+<span id="selected-service" class="text-gray-500">Select a service</span>
+<i class="ri-arrow-down-s-line text-gray-400"></i>
+</button>
+<div id="service-options" class="hidden absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg shadow-lg z-10 max-h-60 overflow-y-auto">
+<div class="p-2 space-y-1">
+<button type="button" class="service-option w-full text-left px-3 py-2 text-sm hover:bg-gray-100 rounded" data-value="web-development">Web Development</button>
+<button type="button" class="service-option w-full text-left px-3 py-2 text-sm hover:bg-gray-100 rounded" data-value="graphic-design">Logo & Graphic Design</button>
+<button type="button" class="service-option w-full text-left px-3 py-2 text-sm hover:bg-gray-100 rounded" data-value="ecommerce">Ecommerce Solutions</button>
+<button type="button" class="service-option w-full text-left px-3 py-2 text-sm hover:bg-gray-100 rounded" data-value="seo-marketing">SEO & Digital Marketing</button>
+<button type="button" class="service-option w-full text-left px-3 py-2 text-sm hover:bg-gray-100 rounded" data-value="social-media">Social Media Marketing</button>
+<button type="button" class="service-option w-full text-left px-3 py-2 text-sm hover:bg-gray-100 rounded" data-value="ppc-ads">PPC & Paid Advertising</button>
+<button type="button" class="service-option w-full text-left px-3 py-2 text-sm hover:bg-gray-100 rounded" data-value="content-marketing">Content Marketing</button>
+<button type="button" class="service-option w-full text-left px-3 py-2 text-sm hover:bg-gray-100 rounded" data-value="branding">Branding Solutions</button>
+<button type="button" class="service-option w-full text-left px-3 py-2 text-sm hover:bg-gray-100 rounded" data-value="multiple">Multiple Services</button>
+</div>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-3">
+Project Budget Range <span class="text-red-500">*</span>
+</label>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<label class="flex items-center space-x-3 p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-primary transition-colors">
+<input type="radio" name="budget" value="under-5k" class="custom-radio">
+<span class="text-sm">Under $5,000</span>
+</label>
+<label class="flex items-center space-x-3 p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-primary transition-colors">
+<input type="radio" name="budget" value="5k-10k" class="custom-radio">
+<span class="text-sm">$5,000 - $10,000</span>
+</label>
+<label class="flex items-center space-x-3 p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-primary transition-colors">
+<input type="radio" name="budget" value="10k-25k" class="custom-radio">
+<span class="text-sm">$10,000 - $25,000</span>
+</label>
+<label class="flex items-center space-x-3 p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-primary transition-colors">
+<input type="radio" name="budget" value="25k-50k" class="custom-radio">
+<span class="text-sm">$25,000 - $50,000</span>
+</label>
+<label class="flex items-center space-x-3 p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-primary transition-colors">
+<input type="radio" name="budget" value="50k-100k" class="custom-radio">
+<span class="text-sm">$50,000 - $100,000</span>
+</label>
+<label class="flex items-center space-x-3 p-4 border border-gray-300 rounded-lg cursor-pointer hover:border-primary transition-colors">
+<input type="radio" name="budget" value="over-100k" class="custom-radio">
+<span class="text-sm">Over $100,000</span>
+</label>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-3">
+Timeline Requirements <span class="text-red-500">*</span>
+</label>
+<div class="relative">
+<button type="button" id="timeline-dropdown" class="w-full px-4 py-3 border border-gray-300 rounded-lg text-left bg-white flex items-center justify-between text-sm focus:ring-2 focus:ring-primary focus:border-transparent">
+<span id="selected-timeline" class="text-gray-500">Select timeline</span>
+<i class="ri-arrow-down-s-line text-gray-400"></i>
+</button>
+<div id="timeline-options" class="hidden absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg shadow-lg z-10">
+<div class="p-2 space-y-1">
+<button type="button" class="timeline-option w-full text-left px-3 py-2 text-sm hover:bg-gray-100 rounded" data-value="asap">ASAP (Rush Job)</button>
+<button type="button" class="timeline-option w-full text-left px-3 py-2 text-sm hover:bg-gray-100 rounded" data-value="1-2-weeks">1-2 weeks</button>
+<button type="button" class="timeline-option w-full text-left px-3 py-2 text-sm hover:bg-gray-100 rounded" data-value="1-month">1 month</button>
+<button type="button" class="timeline-option w-full text-left px-3 py-2 text-sm hover:bg-gray-100 rounded" data-value="2-3-months">2-3 months</button>
+<button type="button" class="timeline-option w-full text-left px-3 py-2 text-sm hover:bg-gray-100 rounded" data-value="3-6-months">3-6 months</button>
+<button type="button" class="timeline-option w-full text-left px-3 py-2 text-sm hover:bg-gray-100 rounded" data-value="flexible">Flexible</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 3: Project Details -->
+<div id="step-3" class="form-step hidden">
+<div class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">
+Project Description <span class="text-red-500">*</span>
+</label>
+<textarea id="project-description" required rows="6" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm resize-vertical" placeholder="Please describe your project in detail. Include your goals, target audience, specific requirements, and any other relevant information that will help us understand your needs."></textarea>
+<div class="text-xs text-gray-500 mt-1">Minimum 50 characters required</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-3">File Upload (Optional)</label>
+<div class="file-drop-zone p-8 rounded-lg text-center" id="file-drop-zone">
+<div class="w-12 h-12 mx-auto mb-4 text-gray-400">
+<i class="ri-upload-cloud-2-line text-4xl"></i>
+</div>
+<p class="text-sm text-gray-600 mb-2">
+<span class="font-medium text-primary cursor-pointer" id="file-select">Click to upload</span> or drag and drop
+</p>
+<p class="text-xs text-gray-500">PDF, DOC, DOCX, TXT up to 10MB</p>
+<input type="file" id="file-input" class="hidden" accept=".pdf,.doc,.docx,.txt" multiple>
+</div>
+<div id="file-list" class="mt-4 space-y-2 hidden"></div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-3">Additional Requirements</label>
+<div class="space-y-3">
+<label class="flex items-start space-x-3">
+<input type="checkbox" class="custom-checkbox mt-0.5">
+<span class="text-sm text-gray-700">I need ongoing maintenance and support</span>
+</label>
+<label class="flex items-start space-x-3">
+<input type="checkbox" class="custom-checkbox mt-0.5">
+<span class="text-sm text-gray-700">I require training for my team</span>
+</label>
+<label class="flex items-start space-x-3">
+<input type="checkbox" class="custom-checkbox mt-0.5">
+<span class="text-sm text-gray-700">I need hosting and domain setup</span>
+</label>
+<label class="flex items-start space-x-3">
+<input type="checkbox" class="custom-checkbox mt-0.5">
+<span class="text-sm text-gray-700">I want analytics and reporting setup</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Navigation Buttons -->
+<div class="flex justify-between pt-8 border-t">
+<button type="button" id="prev-btn" class="px-6 py-3 border border-gray-300 text-gray-700 !rounded-button font-medium hover:bg-gray-50 transition-colors whitespace-nowrap hidden">
+Previous
+</button>
+<div class="flex space-x-4 ml-auto">
+<button type="button" id="next-btn" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-secondary transition-colors whitespace-nowrap">
+Next Step
+</button>
+<button type="submit" id="submit-btn" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-secondary transition-colors whitespace-nowrap hidden">
+Submit Quote Request
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<!-- Success Message -->
+<div id="success-message" class="hidden bg-white rounded-xl shadow-sm border p-8 text-center">
+<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-check-line text-green-600 text-2xl"></i>
+</div>
+<h2 class="text-2xl font-bold text-gray-900 mb-2">Quote Request Submitted!</h2>
+<p class="text-gray-600 mb-6">Thank you for your interest in our services. We've received your quote request and will review it carefully.</p>
+<div class="bg-gray-50 rounded-lg p-6 mb-6">
+<div class="flex items-center justify-between mb-4">
+<span class="text-sm font-medium text-gray-700">Reference Number:</span>
+<span class="text-sm font-mono bg-white px-3 py-1 rounded border" id="reference-number">QR-2024-001234</span>
+</div>
+<div class="text-sm text-gray-600">
+<p class="mb-2"><strong>What's next?</strong></p>
+<ul class="list-disc list-inside space-y-1 text-left">
+<li>Our team will review your requirements within 24-48 hours</li>
+<li>We'll send you a detailed proposal via email</li>
+<li>We may contact you for additional clarification if needed</li>
+<li>You'll receive a follow-up call to discuss the proposal</li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a href="https://readdy.ai/home/e981323c-6056-4bc3-bdab-f29b87c8871e/235f710a-e1f0-40c8-9abb-4dc865f8b144" data-readdy="true" class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-secondary transition-colors whitespace-nowrap">
+Back to Home
+</a>
+<button type="button" id="new-quote-btn" class="border border-gray-300 text-gray-700 px-6 py-3 !rounded-button font-medium hover:bg-gray-50 transition-colors whitespace-nowrap">
+Submit Another Quote
+</button>
+</div>
+</div>
+</main>
+<script id="form-navigation-script">
+document.addEventListener('DOMContentLoaded', function() {
+let currentStep = 1;
+const totalSteps = 3;
+const form = document.getElementById('quote-form');
+const successMessage = document.getElementById('success-message');
+const nextBtn = document.getElementById('next-btn');
+const prevBtn = document.getElementById('prev-btn');
+const submitBtn = document.getElementById('submit-btn');
+function updateStep() {
+document.querySelectorAll('.form-step').forEach(step => step.classList.add('hidden'));
+document.getElementById(`step-${currentStep}`).classList.remove('hidden');
+document.querySelectorAll('.progress-step').forEach((step, index) => {
+step.classList.remove('active', 'completed');
+if (index + 1 < currentStep) {
+step.classList.add('completed');
+} else if (index + 1 === currentStep) {
+step.classList.add('active');
+}
+});
+document.querySelectorAll('.progress-line').forEach((line, index) => {
+line.classList.remove('active');
+if (index + 1 < currentStep) {
+line.classList.add('active');
+}
+});
+document.getElementById('current-step').textContent = currentStep;
+const titles = ['Contact Information', 'Project Requirements', 'Project Details & Review'];
+const descriptions = ['Tell us how to reach you', 'What services do you need?', 'Describe your project in detail'];
+document.getElementById('step-title').textContent = titles[currentStep - 1];
+document.getElementById('step-description').textContent = descriptions[currentStep - 1];
+prevBtn.classList.toggle('hidden', currentStep === 1);
+nextBtn.classList.toggle('hidden', currentStep === totalSteps);
+submitBtn.classList.toggle('hidden', currentStep !== totalSteps);
+}
+function validateStep(step) {
+const stepElement = document.getElementById(`step-${step}`);
+let isValid = true;
+function showError(element, message) {
+    element.classList.add('border-red-500');
+    let errorDiv = element.nextElementSibling;
+    if (!errorDiv || !errorDiv.classList.contains('error-message')) {
+        errorDiv = document.createElement('div');
+        errorDiv.className = 'error-message text-red-500 text-sm mt-1';
+        element.parentNode.insertBefore(errorDiv, element.nextSibling);
+    }
+    errorDiv.textContent = message;
+    isValid = false;
+}
+function clearError(element) {
+    element.classList.remove('border-red-500');
+    const errorDiv = element.nextElementSibling;
+    if (errorDiv && errorDiv.classList.contains('error-message')) {
+        errorDiv.remove();
+    }
+}
+if (step === 1) {
+    const fullName = document.getElementById('full-name');
+    const email = document.getElementById('email');
+    
+    if (!fullName.value.trim()) {
+        showError(fullName, 'Please enter your full name');
+    } else {
+        clearError(fullName);
+    }
+    
+    if (!email.value.trim()) {
+        showError(email, 'Please enter your email address');
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+        showError(email, 'Please enter a valid email address');
+    } else {
+        clearError(email);
+    }
+}
+if (step === 2) {
+    const serviceDropdown = document.getElementById('service-dropdown');
+    const timelineDropdown = document.getElementById('timeline-dropdown');
+    const budgetOptions = document.getElementsByName('budget');
+    
+    if (document.getElementById('selected-service').textContent === 'Select a service') {
+        showError(serviceDropdown, 'Please select a service type');
+    } else {
+        clearError(serviceDropdown);
+    }
+    
+    if (document.getElementById('selected-timeline').textContent === 'Select timeline') {
+        showError(timelineDropdown, 'Please select a timeline');
+    } else {
+        clearError(timelineDropdown);
+    }
+    
+    if (!Array.from(budgetOptions).some(radio => radio.checked)) {
+        const budgetContainer = document.querySelector('.grid.grid-cols-1.md\\:grid-cols-2.gap-4');
+        showError(budgetContainer, 'Please select a budget range');
+    } else {
+        const budgetContainer = document.querySelector('.grid.grid-cols-1.md\\:grid-cols-2.gap-4');
+        clearError(budgetContainer);
+    }
+}
+if (step === 3) {
+    const description = document.getElementById('project-description');
+    if (!description.value.trim()) {
+        showError(description, 'Please provide a project description');
+    } else if (description.value.trim().length < 50) {
+        showError(description, 'Description must be at least 50 characters long');
+    } else {
+        clearError(description);
+    }
+}
+return isValid;
+}
+nextBtn.addEventListener('click', function() {
+    const oldErrorMessages = document.querySelectorAll('.error-message');
+    oldErrorMessages.forEach(msg => msg.remove());
+    
+    if (validateStep(currentStep)) {
+        currentStep++;
+        updateStep();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+        const firstError = document.querySelector('.error-message');
+        if (firstError) {
+            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+});
+prevBtn.addEventListener('click', function() {
+currentStep--;
+updateStep();
+});
+form.addEventListener('submit', function(e) {
+e.preventDefault();
+if (validateStep(currentStep)) {
+const referenceNumber = 'QR-' + new Date().getFullYear() + '-' + Math.random().toString().substr(2, 6);
+document.getElementById('reference-number').textContent = referenceNumber;
+form.classList.add('hidden');
+successMessage.classList.remove('hidden');
+}
+});
+document.getElementById('new-quote-btn').addEventListener('click', function() {
+form.reset();
+currentStep = 1;
+updateStep();
+form.classList.remove('hidden');
+successMessage.classList.add('hidden');
+document.getElementById('selected-service').textContent = 'Select a service';
+document.getElementById('selected-timeline').textContent = 'Select timeline';
+});
+updateStep();
+});
+</script>
+<script id="dropdown-script">
+document.addEventListener('DOMContentLoaded', function() {
+const serviceDropdown = document.getElementById('service-dropdown');
+const serviceOptions = document.getElementById('service-options');
+const selectedService = document.getElementById('selected-service');
+const timelineDropdown = document.getElementById('timeline-dropdown');
+const timelineOptions = document.getElementById('timeline-options');
+const selectedTimeline = document.getElementById('selected-timeline');
+serviceDropdown.addEventListener('click', function() {
+serviceOptions.classList.toggle('hidden');
+timelineOptions.classList.add('hidden');
+});
+timelineDropdown.addEventListener('click', function() {
+timelineOptions.classList.toggle('hidden');
+serviceOptions.classList.add('hidden');
+});
+document.querySelectorAll('.service-option').forEach(option => {
+option.addEventListener('click', function() {
+selectedService.textContent = this.textContent;
+serviceOptions.classList.add('hidden');
+});
+});
+document.querySelectorAll('.timeline-option').forEach(option => {
+option.addEventListener('click', function() {
+selectedTimeline.textContent = this.textContent;
+timelineOptions.classList.add('hidden');
+});
+});
+document.addEventListener('click', function(e) {
+if (!serviceDropdown.contains(e.target) && !serviceOptions.contains(e.target)) {
+serviceOptions.classList.add('hidden');
+}
+if (!timelineDropdown.contains(e.target) && !timelineOptions.contains(e.target)) {
+timelineOptions.classList.add('hidden');
+}
+});
+});
+</script>
+<script id="file-upload-script">
+document.addEventListener('DOMContentLoaded', function() {
+const fileInput = document.getElementById('file-input');
+const fileDropZone = document.getElementById('file-drop-zone');
+const fileList = document.getElementById('file-list');
+const fileSelect = document.getElementById('file-select');
+let uploadedFiles = [];
+fileSelect.addEventListener('click', () => fileInput.click());
+fileDropZone.addEventListener('dragover', function(e) {
+e.preventDefault();
+this.classList.add('dragover');
+});
+fileDropZone.addEventListener('dragleave', function(e) {
+e.preventDefault();
+this.classList.remove('dragover');
+});
+fileDropZone.addEventListener('drop', function(e) {
+e.preventDefault();
+this.classList.remove('dragover');
+handleFiles(e.dataTransfer.files);
+});
+fileInput.addEventListener('change', function(e) {
+handleFiles(e.target.files);
+});
+function handleFiles(files) {
+Array.from(files).forEach(file => {
+if (file.size <= 10 * 1024 * 1024 && ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/plain'].includes(file.type)) {
+uploadedFiles.push(file);
+displayFile(file);
+}
+});
+}
+function displayFile(file) {
+fileList.classList.remove('hidden');
+const fileItem = document.createElement('div');
+fileItem.className = 'flex items-center justify-between p-3 bg-gray-50 rounded-lg';
+fileItem.innerHTML = `
+<div class="flex items-center space-x-3">
+<i class="ri-file-text-line text-gray-400"></i>
+<div>
+<div class="text-sm font-medium text-gray-900">${file.name}</div>
+<div class="text-xs text-gray-500">${(file.size / 1024).toFixed(1)} KB</div>
+</div>
+</div>
+<button type="button" class="text-red-500 hover:text-red-700" onclick="this.parentElement.remove()">
+<i class="ri-close-line"></i>
+</button>
+`;
+fileList.appendChild(fileItem);
+}
+});
+</script>
+</body>
+</html>

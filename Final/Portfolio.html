@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Projects - ASP Innovations Portfolio</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before {
+content: "\f3c2";
+}
+</style>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#3B82F6',
+secondary: '#1E40AF'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+</head>
+<body class="bg-gray-50">
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <nav class="w-full px-6 py-4">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                        <img src="newlogo.png" alt="Description of image">
+
+                    </div>
+                    <span class="text-2xl font-bold text-gray-900">Asp Innovations</span>
+                </div>
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary font-medium">Home</a>
+                    <a href="About.html" class="text-gray-700 hover:text-primary font-medium">About Us</a>
+                    <a href="#services" class="text-gray-700 hover:text-primary font-medium">Services</a>
+                    <a href="Portfolio.html" class="text-gray-700 hover:text-primary font-medium">Portfolio</a>
+                    <a href="#blog" class="text-gray-700 hover:text-primary font-medium">Blog</a>
+                    <a href="Contact.html" class="text-gray-700 hover:text-primary font-medium">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="Request.html" data-readdy="true">
+                        <button class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-secondary transition-colors whitespace-nowrap">
+                            Request a Quote
+                        </button>
+                    </a>
+                    <button class="lg:hidden w-8 h-8 flex items-center justify-center" id="mobile-menu-btn">
+                        <i class="ri-menu-line text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div class="lg:hidden hidden bg-white border-t" id="mobile-menu">
+            <div class="px-6 py-4 space-y-4">
+                <a href="#home" class="block text-gray-700 hover:text-primary font-medium">Home</a>
+                <a href="#about" class="block text-gray-700 hover:text-primary font-medium">About Us</a>
+                <a href="#services" class="block text-gray-700 hover:text-primary font-medium">Services</a>
+                <a href="#portfolio" class="block text-gray-700 hover:text-primary font-medium">Portfolio</a>
+                <a href="#blog" class="block text-gray-700 hover:text-primary font-medium">Blog</a>
+                <a href="#contact" class="block text-gray-700 hover:text-primary font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+
+<main class="pt-20">
+<section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden" style="background-image: url('https://readdy.ai/api/search-image?query=innovative%20technology%20project%20portfolio%20showcase%2C%20modern%20digital%20solutions%20visualization%2C%20enterprise%20technology%20implementations%2C%20blue%20and%20white%20color%20scheme%2C%20professional%20tech%20environment%2C%20successful%20project%20delivery%20concept%2C%20clean%20corporate%20background%2C%20innovation%20and%20excellence%20representation&width=1920&height=800&seq=hero-projects&orientation=landscape'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-gradient-to-r from-white/90 to-transparent"></div>
+<div class="relative z-10 w-full px-6">
+<div class="max-w-6xl mx-auto">
+<div class="max-w-2xl">
+<h1 class="text-5xl font-bold text-gray-900 mb-6 leading-tight">Our Portfolio</h1>
+<p class="text-xl text-gray-600 mb-8 leading-relaxed">Discover our successful technology implementations across diverse industries, showcasing innovation, expertise, and measurable results.</p>
+<div class="grid grid-cols-3 gap-8 mb-8">
+<div class="text-center">
+<div class="text-3xl font-bold text-primary">250+</div>
+<div class="text-sm text-gray-600">Projects Completed</div>
+</div>
+<div class="text-center">
+<div class="text-3xl font-bold text-primary">15+</div>
+<div class="text-sm text-gray-600">Industries Served</div>
+</div>
+<div class="text-center">
+<div class="text-3xl font-bold text-primary">98%</div>
+<div class="text-sm text-gray-600">Client Satisfaction</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-12 bg-white border-b">
+<div class="max-w-6xl mx-auto px-6">
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center space-x-4">
+<div class="relative">
+<button id="industry-filter" class="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg hover:border-primary transition-colors">
+<span>All Industries</span>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+</button>
+<div id="industry-dropdown" class="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-10 hidden">
+<a href="#" class="block px-4 py-2 hover:bg-gray-50 transition-colors">All Industries</a>
+<a href="#" class="block px-4 py-2 hover:bg-gray-50 transition-colors">Finance</a>
+<a href="#" class="block px-4 py-2 hover:bg-gray-50 transition-colors">Healthcare</a>
+<a href="#" class="block px-4 py-2 hover:bg-gray-50 transition-colors">Retail</a>
+<a href="#" class="block px-4 py-2 hover:bg-gray-50 transition-colors">Manufacturing</a>
+<a href="#" class="block px-4 py-2 hover:bg-gray-50 transition-colors">Technology</a>
+</div>
+</div>
+<div class="relative">
+<button id="tech-filter" class="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg hover:border-primary transition-colors">
+<span>All Technologies</span>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+</button>
+<div id="tech-dropdown" class="absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-10 hidden">
+<a href="#" class="block px-4 py-2 hover:bg-gray-50 transition-colors">All Technologies</a>
+<a href="#" class="block px-4 py-2 hover:bg-gray-50 transition-colors">Cloud Solutions</a>
+<a href="#" class="block px-4 py-2 hover:bg-gray-50 transition-colors">AI & ML</a>
+<a href="#" class="block px-4 py-2 hover:bg-gray-50 transition-colors">Custom Development</a>
+<a href="#" class="block px-4 py-2 hover:bg-gray-50 transition-colors">Cybersecurity</a>
+</div>
+</div>
+</div>
+<div class="relative">
+<input type="text" placeholder="Search projects..." class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-sm">
+<div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 flex items-center justify-center text-gray-400">
+<i class="ri-search-line"></i>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-20 bg-white">
+<div class="max-w-6xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+<p class="text-xl text-gray-600">Showcasing our most impactful technology solutions</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-all group">
+<img src="https://readdy.ai/api/search-image?query=modern%20financial%20technology%20dashboard%20interface%2C%20banking%20digital%20transformation%20visualization%2C%20fintech%20solution%20implementation%2C%20professional%20financial%20services%20technology%2C%20clean%20corporate%20design%2C%20blue%20and%20white%20color%20scheme%2C%20enterprise%20banking%20system&width=400&height=250&seq=project1&orientation=landscape" alt="Global Bank Digital Platform" class="w-full h-48 object-cover object-top">
+<div class="p-6">
+<div class="flex items-center justify-between mb-3">
+<span class="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">Finance</span>
+<span class="text-sm text-gray-500">GlobalBank Corp</span>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Digital Banking Platform</h3>
+<p class="text-gray-600 mb-4 text-sm">Comprehensive digital transformation including core banking modernization, mobile app development, and cloud migration.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Cloud Migration</span>
+<span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Mobile App</span>
+<span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">API Integration</span>
+</div>
+<button class="text-primary font-medium hover:text-secondary transition-colors flex items-center">
+View Case Study
+<div class="w-4 h-4 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</button>
+</div>
+</div>
+
+<div class="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-all group">
+<img src="https://readdy.ai/api/search-image?query=advanced%20healthcare%20AI%20diagnostic%20system%2C%20medical%20technology%20implementation%2C%20hospital%20digital%20transformation%2C%20healthcare%20innovation%20solution%2C%20clean%20medical%20environment%2C%20professional%20healthcare%20technology%2C%20AI%20powered%20medical%20diagnosis&width=400&height=250&seq=project2&orientation=landscape" alt="Healthcare AI Diagnostics" class="w-full h-48 object-cover object-top">
+<div class="p-6">
+<div class="flex items-center justify-between mb-3">
+<span class="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">Healthcare</span>
+<span class="text-sm text-gray-500">MedTech Solutions</span>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">AI Diagnostic System</h3>
+<p class="text-gray-600 mb-4 text-sm">Machine learning-powered diagnostic platform reducing diagnosis time by 60% and improving accuracy rates significantly.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">AI & ML</span>
+<span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Computer Vision</span>
+<span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Data Analytics</span>
+</div>
+<button class="text-primary font-medium hover:text-secondary transition-colors flex items-center">
+View Case Study
+<div class="w-4 h-4 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</button>
+</div>
+</div>
+
+<div class="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-all group">
+<img src="https://readdy.ai/api/search-image?query=modern%20retail%20omnichannel%20platform%2C%20e-commerce%20digital%20transformation%2C%20retail%20technology%20implementation%2C%20smart%20shopping%20experience%2C%20contemporary%20retail%20environment%2C%20integrated%20retail%20solutions%2C%20customer%20experience%20technology&width=400&height=250&seq=project3&orientation=landscape" alt="Retail Omnichannel Platform" class="w-full h-48 object-cover object-top">
+<div class="p-6">
+<div class="flex items-center justify-between mb-3">
+<span class="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">Retail</span>
+<span class="text-sm text-gray-500">RetailMax Chain</span>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Omnichannel Platform</h3>
+<p class="text-gray-600 mb-4 text-sm">Unified retail experience across online and offline channels with real-time inventory management and personalized customer journeys.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">E-commerce</span>
+<span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">CRM Integration</span>
+<span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Analytics</span>
+</div>
+<button class="text-primary font-medium hover:text-secondary transition-colors flex items-center">
+View Case Study
+<div class="w-4 h-4 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</button>
+</div>
+</div>
+
+<div class="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-all group">
+<img src="https://readdy.ai/api/search-image?query=industrial%20IoT%20manufacturing%20system%2C%20smart%20factory%20automation%2C%20manufacturing%20digital%20transformation%2C%20industrial%20technology%20implementation%2C%20modern%20production%20facility%2C%20automated%20manufacturing%20processes%2C%20Industry%204.0%20solutions&width=400&height=250&seq=project4&orientation=landscape" alt="Smart Manufacturing IoT" class="w-full h-48 object-cover object-top">
+<div class="p-6">
+<div class="flex items-center justify-between mb-3">
+<span class="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">Manufacturing</span>
+<span class="text-sm text-gray-500">TechManufacturing Inc</span>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Smart Factory IoT</h3>
+<p class="text-gray-600 mb-4 text-sm">Industrial IoT implementation enabling predictive maintenance, real-time monitoring, and automated quality control systems.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">IoT</span>
+<span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Automation</span>
+<span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Predictive Analytics</span>
+</div>
+<button class="text-primary font-medium hover:text-secondary transition-colors flex items-center">
+View Case Study
+<div class="w-4 h-4 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</button>
+</div>
+</div>
+
+<div class="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-all group">
+<img src="https://readdy.ai/api/search-image?query=enterprise%20cybersecurity%20operations%20center%2C%20security%20monitoring%20dashboard%2C%20cybersecurity%20implementation%2C%20network%20security%20visualization%2C%20professional%20security%20environment%2C%20threat%20detection%20system%2C%20enterprise%20security%20solution&width=400&height=250&seq=project5&orientation=landscape" alt="Enterprise Security Platform" class="w-full h-48 object-cover object-top">
+<div class="p-6">
+<div class="flex items-center justify-between mb-3">
+<span class="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">Technology</span>
+<span class="text-sm text-gray-500">SecureEnterprises</span>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Enterprise Security Platform</h3>
+<p class="text-gray-600 mb-4 text-sm">Comprehensive cybersecurity solution with threat detection, incident response, and compliance management capabilities.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Cybersecurity</span>
+<span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Threat Detection</span>
+<span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Compliance</span>
+</div>
+<button class="text-primary font-medium hover:text-secondary transition-colors flex items-center">
+View Case Study
+<div class="w-4 h-4 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</button>
+</div>
+</div>
+
+<div class="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-all group">
+<img src="https://readdy.ai/api/search-image?query=cloud%20infrastructure%20migration%20visualization%2C%20enterprise%20cloud%20transformation%2C%20cloud%20computing%20implementation%2C%20modern%20data%20center%20technology%2C%20cloud%20services%20architecture%2C%20professional%20cloud%20environment%2C%20scalable%20cloud%20solutions&width=400&height=250&seq=project6&orientation=landscape" alt="Cloud Migration Project" class="w-full h-48 object-cover object-top">
+<div class="p-6">
+<div class="flex items-center justify-between mb-3">
+<span class="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">Finance</span>
+<span class="text-sm text-gray-500">FinanceFirst Group</span>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Cloud Migration Project</h3>
+<p class="text-gray-600 mb-4 text-sm">Large-scale cloud migration with zero downtime, improved scalability, and 40% cost reduction for financial services.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Cloud Migration</span>
+<span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">DevOps</span>
+<span class="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Infrastructure</span>
+</div>
+<button class="text-primary font-medium hover:text-secondary transition-colors flex items-center">
+View Case Study
+<div class="w-4 h-4 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-20 bg-gray-50">
+<div class="max-w-6xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Detailed Case Studies</h2>
+<p class="text-xl text-gray-600">In-depth analysis of our most successful implementations</p>
+</div>
+
+<div class="space-y-20">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<img src="https://readdy.ai/api/search-image?query=modern%20banking%20headquarters%20building%20exterior%2C%20financial%20district%20architecture%2C%20corporate%20banking%20environment%2C%20professional%20financial%20institution%2C%20contemporary%20glass%20building%2C%20urban%20financial%20center%2C%20enterprise%20banking%20facility&width=600&height=400&seq=case-study-1&orientation=landscape" alt="GlobalBank Digital Transformation" class="rounded-2xl shadow-xl w-full h-80 object-cover object-top">
+</div>
+<div>
+<div class="bg-primary/5 border-l-4 border-primary p-6 rounded-r-lg mb-6">
+<h3 class="text-2xl font-bold text-gray-900 mb-4">GlobalBank Digital Transformation</h3>
+<p class="text-gray-600 italic mb-4">"ASP Innovations transformed our entire banking infrastructure, delivering a solution that exceeded our expectations and significantly improved our operational efficiency."</p>
+<div class="flex items-center space-x-4">
+<img src="https://readdy.ai/api/search-image?query=professional%20male%20banking%20executive%20portrait%2C%20confident%20financial%20services%20leader%2C%20corporate%20headshot%20style%2C%20business%20suit%2C%20professional%20banking%20environment%2C%20clean%20background%2C%20trustworthy%20appearance&width=60&height=60&seq=testimonial-1&orientation=squarish" alt="Robert Johnson" class="w-12 h-12 rounded-full object-cover">
+<div>
+<div class="font-semibold text-gray-900">Robert Johnson</div>
+<div class="text-sm text-gray-600">CTO, GlobalBank Corp</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div>
+<h4 class="font-semibold text-gray-900 mb-2">Challenge</h4>
+<p class="text-gray-600">Legacy banking systems causing operational inefficiencies, poor customer experience, and high maintenance costs.</p>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 mb-2">Solution</h4>
+<p class="text-gray-600">Complete digital transformation including cloud migration, mobile banking app, and API-first architecture.</p>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 mb-2">Results</h4>
+<div class="grid grid-cols-2 gap-4">
+<div class="text-center p-3 bg-white rounded-lg">
+<div class="text-2xl font-bold text-primary">40%</div>
+<div class="text-sm text-gray-600">Efficiency Increase</div>
+</div>
+<div class="text-center p-3 bg-white rounded-lg">
+<div class="text-2xl font-bold text-primary">6 months</div>
+<div class="text-sm text-gray-600">Implementation</div>
+</div>
+</div>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 mb-2">Technologies Used</h4>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">AWS Cloud</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">React Native</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Node.js</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">PostgreSQL</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="order-2 lg:order-1">
+<div class="bg-primary/5 border-l-4 border-primary p-6 rounded-r-lg mb-6">
+<h3 class="text-2xl font-bold text-gray-900 mb-4">Healthcare AI Diagnostic System</h3>
+<p class="text-gray-600 italic mb-4">"The AI diagnostic system has revolutionized our patient care process, reducing diagnosis time dramatically while improving accuracy rates."</p>
+<div class="flex items-center space-x-4">
+<img src="https://readdy.ai/api/search-image?query=professional%20female%20healthcare%20executive%20portrait%2C%20confident%20medical%20administrator%2C%20healthcare%20leadership%2C%20corporate%20headshot%20style%2C%20medical%20professional%20attire%2C%20clean%20background%2C%20trustworthy%20appearance&width=60&height=60&seq=testimonial-2&orientation=squarish" alt="Dr. Sarah Mitchell" class="w-12 h-12 rounded-full object-cover">
+<div>
+<div class="font-semibold text-gray-900">Dr. Sarah Mitchell</div>
+<div class="text-sm text-gray-600">Chief Medical Officer, MedTech Solutions</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div>
+<h4 class="font-semibold text-gray-900 mb-2">Challenge</h4>
+<p class="text-gray-600">Time-consuming manual diagnostic processes leading to delayed patient care and increased healthcare costs.</p>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 mb-2">Solution</h4>
+<p class="text-gray-600">AI-powered diagnostic platform with computer vision and machine learning capabilities for rapid analysis.</p>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 mb-2">Results</h4>
+<div class="grid grid-cols-2 gap-4">
+<div class="text-center p-3 bg-white rounded-lg">
+<div class="text-2xl font-bold text-primary">60%</div>
+<div class="text-sm text-gray-600">Faster Diagnosis</div>
+</div>
+<div class="text-center p-3 bg-white rounded-lg">
+<div class="text-2xl font-bold text-primary">95%</div>
+<div class="text-sm text-gray-600">Accuracy Rate</div>
+</div>
+</div>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 mb-2">Technologies Used</h4>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">TensorFlow</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Python</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">OpenCV</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Docker</span>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<img src="https://readdy.ai/api/search-image?query=modern%20healthcare%20facility%20interior%20with%20AI%20diagnostic%20equipment%2C%20medical%20technology%20implementation%2C%20advanced%20hospital%20environment%2C%20AI%20powered%20medical%20systems%2C%20clean%20medical%20setting%2C%20healthcare%20innovation%20technology&width=600&height=400&seq=case-study-2&orientation=landscape" alt="Healthcare AI Implementation" class="rounded-2xl shadow-xl w-full h-80 object-cover object-top">
+</div>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<img src="https://readdy.ai/api/search-image?query=modern%20retail%20store%20interior%20with%20omnichannel%20technology%2C%20integrated%20retail%20systems%2C%20smart%20shopping%20experience%2C%20contemporary%20retail%20environment%2C%20digital%20retail%20transformation%2C%20customer%20experience%20technology&width=600&height=400&seq=case-study-3&orientation=landscape" alt="Retail Omnichannel Platform" class="rounded-2xl shadow-xl w-full h-80 object-cover object-top">
+</div>
+<div>
+<div class="bg-primary/5 border-l-4 border-primary p-6 rounded-r-lg mb-6">
+<h3 class="text-2xl font-bold text-gray-900 mb-4">Retail Omnichannel Platform</h3>
+<p class="text-gray-600 italic mb-4">"The omnichannel platform unified our customer experience across all touchpoints, resulting in unprecedented growth in online sales."</p>
+<div class="flex items-center space-x-4">
+<img src="https://readdy.ai/api/search-image?query=professional%20male%20retail%20executive%20portrait%2C%20confident%20retail%20industry%20leader%2C%20business%20executive%20headshot%2C%20corporate%20retail%20environment%2C%20professional%20business%20attire%2C%20clean%20background%2C%20approachable%20appearance&width=60&height=60&seq=testimonial-3&orientation=squarish" alt="Mark Thompson" class="w-12 h-12 rounded-full object-cover">
+<div>
+<div class="font-semibold text-gray-900">Mark Thompson</div>
+<div class="text-sm text-gray-600">VP of Digital, RetailMax Chain</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div>
+<h4 class="font-semibold text-gray-900 mb-2">Challenge</h4>
+<p class="text-gray-600">Fragmented customer experience across online and offline channels with inconsistent inventory management.</p>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 mb-2">Solution</h4>
+<p class="text-gray-600">Unified omnichannel platform with real-time inventory sync, personalized recommendations, and seamless checkout.</p>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 mb-2">Results</h4>
+<div class="grid grid-cols-2 gap-4">
+<div class="text-center p-3 bg-white rounded-lg">
+<div class="text-2xl font-bold text-primary">200%</div>
+<div class="text-sm text-gray-600">Online Sales Growth</div>
+</div>
+<div class="text-center p-3 bg-white rounded-lg">
+<div class="text-2xl font-bold text-primary">8 months</div>
+<div class="text-sm text-gray-600">ROI Achievement</div>
+</div>
+</div>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 mb-2">Technologies Used</h4>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Shopify Plus</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">React</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">MongoDB</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Stripe</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-20 bg-white">
+<div class="max-w-6xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Industry Solutions</h2>
+<p class="text-xl text-gray-600">Specialized expertise across key industries</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<div class="w-8 h-8 flex items-center justify-center text-primary text-2xl">
+<i class="ri-bank-line"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Financial Services</h3>
+<p class="text-gray-600 mb-6">Digital banking, fintech solutions, regulatory compliance, and payment processing systems.</p>
+<div class="space-y-2 text-sm text-gray-600 mb-6">
+<div>• 15+ banking clients served</div>
+<div>• $2.5B+ in transaction volume</div>
+<div>• 99.9% uptime achieved</div>
+</div>
+<button class="text-primary font-medium hover:text-secondary transition-colors flex items-center">
+View Projects
+<div class="w-4 h-4 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</button>
+</div>
+
+<div class="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<div class="w-8 h-8 flex items-center justify-center text-primary text-2xl">
+<i class="ri-health-book-line"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Healthcare</h3>
+<p class="text-gray-600 mb-6">Electronic health records, telemedicine platforms, AI diagnostics, and patient management systems.</p>
+<div class="space-y-2 text-sm text-gray-600 mb-6">
+<div>• 25+ healthcare providers</div>
+<div>• 1M+ patient records managed</div>
+<div>• HIPAA compliant solutions</div>
+</div>
+<button class="text-primary font-medium hover:text-secondary transition-colors flex items-center">
+View Projects
+<div class="w-4 h-4 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</button>
+</div>
+<div class="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<div class="w-8 h-8 flex items-center justify-center text-primary text-2xl">
+<i class="ri-shopping-cart-line"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Retail</h3>
+<p class="text-gray-600 mb-6">E-commerce platforms, inventory management, customer analytics, and omnichannel experiences.</p>
+<div class="space-y-2 text-sm text-gray-600 mb-6">
+<div>• 30+ retail brands</div>
+<div>• $500M+ in online sales</div>
+<div>• 40% avg. conversion increase</div>
+</div>
+<button class="text-primary font-medium hover:text-secondary transition-colors flex items-center">
+View Projects
+<div class="w-4 h-4 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</button>
+</div>
+
+<div class="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<div class="w-8 h-8 flex items-center justify-center text-primary text-2xl">
+<i class="ri-settings-3-line"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Manufacturing</h3>
+<p class="text-gray-600 mb-6">Industrial IoT, predictive maintenance, quality control systems, and supply chain optimization.</p>
+<div class="space-y-2 text-sm text-gray-600 mb-6">
+<div>• 20+ manufacturing plants</div>
+<div>• 35% efficiency improvement</div>
+<div>• $10M+ cost savings</div>
+</div>
+<button class="text-primary font-medium hover:text-secondary transition-colors flex items-center">
+View Projects
+<div class="w-4 h-4 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</button>
+</div>
+<div class="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<div class="w-8 h-8 flex items-center justify-center text-primary text-2xl">
+<i class="ri-computer-line"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Technology</h3>
+<p class="text-gray-600 mb-6">SaaS platforms, cloud infrastructure, cybersecurity solutions, and enterprise software development.</p>
+<div class="space-y-2 text-sm text-gray-600 mb-6">
+<div>• 50+ tech companies</div>
+<div>• 99.99% security record</div>
+<div>• 24/7 support provided</div>
+</div>
+<button class="text-primary font-medium hover:text-secondary transition-colors flex items-center">
+View Projects
+<div class="w-4 h-4 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</button>
+</div>
+
+<div class="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<div class="w-8 h-8 flex items-center justify-center text-primary text-2xl">
+<i class="ri-graduation-cap-line"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Education</h3>
+<p class="text-gray-600 mb-6">Learning management systems, virtual classrooms, student information systems, and educational analytics.</p>
+<div class="space-y-2 text-sm text-gray-600 mb-6">
+<div>• 40+ educational institutions</div>
+<div>• 500K+ students served</div>
+<div>• 95% user satisfaction</div>
+</div>
+<button class="text-primary font-medium hover:text-secondary transition-colors flex items-center">
+View Projects
+<div class="w-4 h-4 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</button>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-20 bg-gray-50">
+<div class="max-w-6xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Project Success Metrics</h2>
+<p class="text-xl text-gray-600">Measurable outcomes that demonstrate our impact</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-all">
+<div class="text-4xl font-bold text-primary mb-2">250+</div>
+<div class="text-gray-600 font-medium mb-2">Projects Delivered</div>
+<div class="text-sm text-gray-500">Across 15+ industries worldwide</div>
+</div>
+<div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-all">
+<div class="text-4xl font-bold text-primary mb-2">98%</div>
+<div class="text-gray-600 font-medium mb-2">Client Satisfaction</div>
+<div class="text-sm text-gray-500">Based on post-project surveys</div>
+</div>
+<div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-all">
+<div class="text-4xl font-bold text-primary mb-2">40%</div>
+<div class="text-gray-600 font-medium mb-2">Avg. Efficiency Gain</div>
+<div class="text-sm text-gray-500">Operational improvements achieved</div>
+</div>
+<div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-all">
+<div class="text-4xl font-bold text-primary mb-2">6 months</div>
+<div class="text-gray-600 font-medium mb-2">Avg. ROI Timeline</div>
+<div class="text-sm text-gray-500">Time to return on investment</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-20 bg-white">
+<div class="max-w-6xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Client Testimonials</h2>
+<p class="text-xl text-gray-600">What our clients say about working with us</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-gray-50 rounded-2xl p-8">
+<div class="flex items-center mb-4">
+<img src="https://readdy.ai/api/search-image?query=professional%20female%20CEO%20executive%20portrait%2C%20confident%20business%20leader%2C%20corporate%20headshot%20style%2C%20professional%20business%20attire%2C%20clean%20background%2C%20trustworthy%20appearance%2C%20executive%20leadership&width=60&height=60&seq=client-1&orientation=squarish" alt="Jennifer Adams" class="w-12 h-12 rounded-full object-cover mr-4">
+<div>
+<div class="font-semibold text-gray-900">Jennifer Adams</div>
+<div class="text-sm text-gray-600">CEO, TechStart Inc</div>
+</div>
+</div>
+<p class="text-gray-600 italic mb-4">"ASP Innovations delivered beyond our expectations. Their technical expertise and project management skills are exceptional."</p>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+
+<div class="bg-gray-50 rounded-2xl p-8">
+<div class="flex items-center mb-4">
+<img src="https://readdy.ai/api/search-image?query=professional%20male%20CTO%20executive%20portrait%2C%20confident%20technology%20leader%2C%20corporate%20headshot%20style%2C%20business%20suit%2C%20clean%20background%2C%20professional%20appearance%2C%20tech%20executive&width=60&height=60&seq=client-2&orientation=squarish" alt="Michael Brown" class="w-12 h-12 rounded-full object-cover mr-4">
+<div>
+<div class="font-semibold text-gray-900">Michael Brown</div>
+<div class="text-sm text-gray-600">CTO, DataFlow Systems</div>
+</div>
+</div>
+<p class="text-gray-600 italic mb-4">"The cloud migration project was seamless. Zero downtime and significant cost savings. Highly recommended!"</p>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+
+<div class="bg-gray-50 rounded-2xl p-8">
+<div class="flex items-center mb-4">
+<img src="https://readdy.ai/api/search-image?query=professional%20female%20VP%20executive%20portrait%2C%20confident%20business%20leader%2C%20corporate%20headshot%20style%2C%20professional%20attire%2C%20clean%20background%2C%20approachable%20appearance%2C%20executive%20leadership&width=60&height=60&seq=client-3&orientation=squarish" alt="Lisa Chen" class="w-12 h-12 rounded-full object-cover mr-4">
+<div>
+<div class="font-semibold text-gray-900">Lisa Chen</div>
+<div class="text-sm text-gray-600">VP Operations, HealthCare Plus</div>
+</div>
+</div>
+<p class="text-gray-600 italic mb-4">"Their AI diagnostic solution transformed our patient care process. The results speak for themselves."</p>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+
+<div class="bg-gray-50 rounded-2xl p-8">
+<div class="flex items-center mb-4">
+<img src="https://readdy.ai/api/search-image?query=professional%20male%20director%20executive%20portrait%2C%20confident%20business%20leader%2C%20corporate%20headshot%20style%2C%20business%20suit%2C%20clean%20background%2C%20professional%20appearance%2C%20executive%20leadership&width=60&height=60&seq=client-4&orientation=squarish" alt="David Wilson" class="w-12 h-12 rounded-full object-cover mr-4">
+<div>
+<div class="font-semibold text-gray-900">David Wilson</div>
+<div class="text-sm text-gray-600">IT Director, Manufacturing Corp</div>
+</div>
+</div>
+<p class="text-gray-600 italic mb-4">"The IoT implementation increased our production efficiency by 35%. Outstanding work!"</p>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+
+<div class="bg-gray-50 rounded-2xl p-8">
+<div class="flex items-center mb-4">
+<img src="https://readdy.ai/api/search-image?query=professional%20female%20manager%20executive%20portrait%2C%20confident%20business%20leader%2C%20corporate%20headshot%20style%2C%20professional%20attire%2C%20clean%20background%2C%20trustworthy%20appearance%2C%20business%20executive&width=60&height=60&seq=client-5&orientation=squarish" alt="Sarah Davis" class="w-12 h-12 rounded-full object-cover mr-4">
+<div>
+<div class="font-semibold text-gray-900">Sarah Davis</div>
+<div class="text-sm text-gray-600">Digital Manager, RetailChain</div>
+</div>
+</div>
+<p class="text-gray-600 italic mb-4">"The omnichannel platform doubled our online sales. Exceptional project delivery and support."</p>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+
+<div class="bg-gray-50 rounded-2xl p-8">
+<div class="flex items-center mb-4">
+<img src="https://readdy.ai/api/search-image?query=professional%20male%20senior%20executive%20portrait%2C%20confident%20business%20leader%2C%20corporate%20headshot%20style%2C%20business%20suit%2C%20clean%20background%2C%20professional%20appearance%2C%20executive%20leadership&width=60&height=60&seq=client-6&orientation=squarish" alt="Robert Taylor" class="w-12 h-12 rounded-full object-cover mr-4">
+<div>
+<div class="font-semibold text-gray-900">Robert Taylor</div>
+<div class="text-sm text-gray-600">Senior VP, FinanceFirst</div>
+</div>
+</div>
+<p class="text-gray-600 italic mb-4">"Professional, reliable, and innovative. ASP Innovations is our go-to technology partner."</p>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-20 bg-primary">
+<div class="max-w-6xl mx-auto px-6">
+<div class="text-center mb-12">
+<h2 class="text-4xl font-bold text-white mb-4">Start Your Project</h2>
+<p class="text-xl text-blue-100">Ready to transform your business with innovative technology solutions?</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+<h3 class="text-2xl font-semibold text-white mb-6">Get In Touch</h3>
+<form class="space-y-4">
+<div>
+<input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white">
+</div>
+<div>
+<input type="email" placeholder="Your Email" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white">
+</div>
+<div>
+<input type="text" placeholder="Company Name" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white">
+</div>
+<div>
+<textarea placeholder="Project Details" rows="4" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white"></textarea>
+</div>
+<button class="bg-white text-primary px-8 py-3 !rounded-button font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap w-full">Send Message</button>
+</form>
+</div>
+</div>
+<div>
+<div class="space-y-8">
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+<div class="w-6 h-6 flex items-center justify-center text-white">
+<i class="ri-phone-line"></i>
+</div>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-1">Phone</h4>
+<p class="text-blue-100">+1 (555) 123-4567</p>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+<div class="w-6 h-6 flex items-center justify-center text-white">
+<i class="ri-mail-line"></i>
+</div>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-1">Email</h4>
+<p class="text-blue-100">projects@aspinnovations.com</p>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+<div class="w-6 h-6 flex items-center justify-center text-white">
+<i class="ri-calendar-line"></i>
+</div>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-1">Schedule</h4>
+<p class="text-blue-100">Book a consultation call</p>
+</div>
+</div>
+<div class="pt-6">
+<button class="border-2 border-white text-white px-8 py-3 !rounded-button font-semibold hover:bg-white hover:text-primary transition-colors whitespace-nowrap">Schedule Consultation</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="bg-gray-900 text-white py-16">
+<div class="max-w-6xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<div>
+<div class="font-['Pacifico'] text-2xl text-primary mb-4">logo</div>
+<p class="text-gray-400 mb-6">Pioneering technology solutions that drive business transformation and innovation.</p>
+<div class="flex space-x-4">
+<div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-linkedin-fill"></i>
+</div>
+</div>
+<div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-twitter-fill"></i>
+</div>
+</div>
+<div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-facebook-fill"></i>
+</div>
+</div>
+<div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-instagram-fill"></i>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Company</h3>
+<ul class="space-y-3 text-gray-400">
+<li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+<li><a href="#" class="hover:text-white transition-colors">Our Team</a></li>
+<li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+<li><a href="#" class="hover:text-white transition-colors">News & Updates</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Services</h3>
+<ul class="space-y-3 text-gray-400">
+<li><a href="#" class="hover:text-white transition-colors">Digital Transformation</a></li>
+<li><a href="#" class="hover:text-white transition-colors">Cloud Solutions</a></li>
+<li><a href="#" class="hover:text-white transition-colors">AI & Machine Learning</a></li>
+<li><a href="#" class="hover:text-white transition-colors">Cybersecurity</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+<p class="text-gray-400 mb-4">Stay updated with our latest insights and innovations.</p>
+<div class="flex">
+<input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-primary text-white text-sm">
+<button class="bg-primary px-6 py-2 rounded-r-lg hover:bg-secondary transition-colors whitespace-nowrap">Subscribe</button>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm">© 2024 ASP Innovations. All rights reserved.</p>
+<div class="flex space-x-6 mt-4 md:mt-0">
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+<script id="filter-functionality">
+document.addEventListener('DOMContentLoaded', function() {
+const industryFilter = document.getElementById('industry-filter');
+const techFilter = document.getElementById('tech-filter');
+const industryDropdown = document.getElementById('industry-dropdown');
+const techDropdown = document.getElementById('tech-dropdown');
+
+industryFilter.addEventListener('click', function() {
+industryDropdown.classList.toggle('hidden');
+techDropdown.classList.add('hidden');
+});
+
+techFilter.addEventListener('click', function() {
+techDropdown.classList.toggle('hidden');
+industryDropdown.classList.add('hidden');
+});
+
+document.addEventListener('click', function(e) {
+if (!industryFilter.contains(e.target) && !industryDropdown.contains(e.target)) {
+industryDropdown.classList.add('hidden');
+}
+if (!techFilter.contains(e.target) && !techDropdown.contains(e.target)) {
+techDropdown.classList.add('hidden');
+}
+});
+
+industryDropdown.addEventListener('click', function(e) {
+if (e.target.tagName === 'A') {
+e.preventDefault();
+industryFilter.querySelector('span').textContent = e.target.textContent;
+industryDropdown.classList.add('hidden');
+}
+});
+
+techDropdown.addEventListener('click', function(e) {
+if (e.target.tagName === 'A') {
+e.preventDefault();
+techFilter.querySelector('span').textContent = e.target.textContent;
+techDropdown.classList.add('hidden');
+}
+});
+});
+</script>
+
+<script id="project-animations">
+document.addEventListener('DOMContentLoaded', function() {
+const projectCards = document.querySelectorAll('.bg-gray-50.rounded-2xl');
+const observerOptions = {
+threshold: 0.2,
+rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach((entry, index) => {
+if (entry.isIntersecting) {
+setTimeout(() => {
+entry.target.style.opacity = '1';
+entry.target.style.transform = 'translateY(0)';
+}, index * 100);
+}
+});
+}, observerOptions);
+
+projectCards.forEach(card => {
+card.style.opacity = '0';
+card.style.transform = 'translateY(20px)';
+card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+observer.observe(card);
+});
+});
+</script>
+
+<script id="form-handling">
+document.addEventListener('DOMContentLoaded', function() {
+const form = document.querySelector('form');
+if (form) {
+form.addEventListener('submit', function(e) {
+e.preventDefault();
+const submitButton = form.querySelector('button[type="submit"]') || form.querySelector('button');
+const originalText = submitButton.textContent;
+submitButton.textContent = 'Sending...';
+submitButton.disabled = true;
+
+setTimeout(() => {
+submitButton.textContent = 'Message Sent!';
+setTimeout(() => {
+submitButton.textContent = originalText;
+submitButton.disabled = false;
+form.reset();
+}, 2000);
+}, 1500);
+});
+}
+});
+</script>
+
+<script id="smooth-scroll">
+document.addEventListener('DOMContentLoaded', function() {
+const links = document.querySelectorAll('a[href^="#"]');
+links.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const target = document.querySelector(this.getAttribute('href'));
+if (target) {
+target.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+}
+});
+});
+});
+</script>
+</body>
+</html>

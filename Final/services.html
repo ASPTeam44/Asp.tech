@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Asp Innovations — Services That Transform</title>
+  <meta name="description" content="We architect digital futures. Explore our services in web & app development, branding, ecommerce, and performance marketing." />
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #f8f9fe;
+      --surface: #ffffff;
+      --text: #0d121f;
+      --muted: #5f6b85;
+      --border: #e6e9f2;
+      --primary: #2563eb;
+      --secondary: #7c3aed;
+      --accent: #06b6d4;
+      --shadow-soft: 0 8px 30px rgba(15, 23, 42, .08);
+      --shadow-hard: 0 16px 50px rgba(15, 23, 42, .14);
+    }
+    [data-theme="dark"]{
+      --bg: #0b1220;
+      --surface: #10182b;
+      --text: #eef2ff;
+      --muted: #94a3b8;
+      --border: #1f2a44;
+      --shadow-soft: 0 8px 30px rgba(0, 0, 0, .3);
+      --shadow-hard: 0 16px 50px rgba(0, 0, 0, .5);
+    }
+
+    /* Base Styles */
+    *, *::before, *::after{box-sizing:border-box}
+    html,body{scroll-behavior:smooth}
+    body{
+      margin:0; background:var(--bg); color:var(--text);
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    .container{max-width:1180px; margin:0 auto; padding:0 20px}
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter:saturate(160%) blur(10px);
+      background:color-mix(in srgb, var(--bg) 86%, transparent);
+      border-bottom:1px solid var(--border);
+    }
+    .nav-wrap{height:70px; display:flex; align-items:center; justify-content:space-between}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px}
+    .logo{width:36px; height:36px; border-radius:12px; display:grid; place-items:center; color:#fff; background:linear-gradient(135deg, var(--primary), var(--secondary)); box-shadow:var(--shadow-soft)}
+    .nav-actions{display:flex; align-items:center; gap:10px}
+    .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px; border:1px solid var(--border); background:var(--surface); color:var(--text); font-weight:700; transition:.2s ease}
+    .btn.primary{background:linear-gradient(135deg, var(--primary), var(--secondary)); border:0; color:#fff}
+    .btn:hover{transform:translateY(-2px) scale(1.02); box-shadow:var(--shadow-hard)}
+    .theme-toggle{padding:10px}
+
+    /* Hero */
+    .hero{
+      position:relative; overflow:hidden; padding:60px 0 40px; text-align:center;
+    }
+    .hero-aurora{
+      position:absolute; inset:0; z-index:-1;
+      background:
+        radial-gradient(800px circle at 15% 10%, color-mix(in srgb, var(--primary) 30%, transparent), transparent 70%),
+        radial-gradient(800px circle at 85% 20%, color-mix(in srgb, var(--secondary) 30%, transparent), transparent 70%);
+      filter:blur(50px); opacity:.7; animation:aurora-flow 12s linear infinite alternate;
+    }
+    @keyframes aurora-flow{from{transform:rotate(0deg) scale(1)} to{transform:rotate(45deg) scale(1.2)}}
+    .hero h1{
+      font-size:clamp(2.5rem, 6vw, 4rem); font-weight:900; line-height:1.1;
+      letter-spacing:-.04em; margin:12px 0 10px;
+    }
+    .hero h1 span.reveal-char{display:inline-block; opacity:0; transform:translateY(20px) rotate(10deg); transition:transform .6s ease, opacity .6s ease}
+    .hero p.sub{
+      font-size:clamp(1rem, 2vw, 1.2rem); color:var(--muted);
+      max-width:760px; margin:0 auto 16px;
+      opacity:0; transform:translateY(15px); animation:fade-in-up .8s .5s ease-out forwards;
+    }
+    .hero .cta-row{
+      justify-content:center; display:flex; gap:12px;
+      opacity:0; transform:translateY(15px); animation:fade-in-up .8s .7s ease-out forwards;
+    }
+    @keyframes fade-in-up{to{opacity:1; transform:none}}
+
+    /* Services Section */
+    .services{padding:40px 0}
+    .service-row{
+      display:grid; grid-template-columns:1fr 1fr; gap:3rem;
+      align-items:center; padding:4rem 0; border-bottom:1px solid var(--border);
+    }
+    .service-row:last-child{border:none}
+    .service-row.reverse{direction:rtl}
+    .service-row.reverse > *{direction:ltr}
+
+    .service-media{
+      position:relative; opacity:0; transform:scale(.9) translateY(20px);
+      transition:transform 1s cubic-bezier(.16,1,.3,1), opacity 1s cubic-bezier(.16,1,.3,1);
+    }
+    .service-media.is-visible{opacity:1; transform:none}
+    .media-card{
+      border-radius:var(--radius); overflow:hidden; border:1px solid var(--border);
+      box-shadow:var(--shadow-soft); background:var(--surface);
+      transition:transform .4s ease, box-shadow .4s ease;
+    }
+    .media-card:hover{transform:scale(1.03); box-shadow:var(--shadow-hard)}
+    .media-card img{width:100%; height:380px; object-fit:cover; display:block}
+
+    .service-content{
+      opacity:0; transform:translateX(30px);
+      transition:transform 1s cubic-bezier(.16,1,.3,1), opacity 1s cubic-bezier(.16,1,.3,1);
+    }
+    .service-row.reverse .service-content{transform:translateX(-30px)}
+    .service-content.is-visible{opacity:1; transform:none}
+
+    .service-content .eyebrow{color:var(--primary); font-size:13px; font-weight:700; letter-spacing:.05em; text-transform:uppercase}
+    .service-content h2{font-size:clamp(1.7rem, 4vw, 2.2rem); letter-spacing:-.03em; margin:8px 0 10px}
+    .service-content p{color:var(--muted); line-height:1.7}
+    .service-content .link{
+      display:inline-flex; align-items:center; gap:8px; margin-top:16px; font-weight:700;
+      color:var(--secondary); position:relative; padding-bottom:4px;
+    }
+    .service-content .link::after{
+      content:''; position:absolute; left:0; bottom:0; height:2px; width:100%;
+      background:var(--secondary); transform:scaleX(0); transform-origin:left;
+      transition:transform .3s ease;
+    }
+    .service-content .link:hover::after{transform:scaleX(1)}
+
+    /* CTA Section */
+    .cta-section{
+      margin:40px auto; padding:3rem 2rem; border-radius:24px; text-align:center;
+      background:linear-gradient(145deg, var(--primary), var(--secondary)); color:#fff;
+      box-shadow:var(--shadow-hard);
+    }
+    .cta-section h2{font-size:clamp(1.8rem, 4vw, 2.5rem); margin:0 0 10px}
+    .cta-section p{max-width:600px; margin:0 auto 16px; opacity:.85}
+    .cta-section .btn{background:rgba(255,255,255,.9); color:var(--primary)}
+
+    /* Footer */
+    footer{
+      padding-top:40px; border-top:1px solid var(--border);
+      background:var(--surface);
+    }
+    .f-grid{
+      display:grid; grid-template-columns:2fr 1fr 1fr 1.5fr;
+      gap:2rem; padding-bottom:2rem;
+    }
+    .f-title{font-weight:700; margin-bottom:12px}
+    .f-link{display:block; color:var(--muted); padding:6px 0}
+    .f-link:hover{color:var(--primary)}
+    .f-brand p{color:var(--muted); margin-top:12px}
+    .newsletter input{width:100%; padding:10px 12px; border-radius:12px; border:1px solid var(--border); background:var(--bg); color:var(--text)}
+    .newsletter button{width:100%; margin-top:8px}
+    .legal{
+      display:flex; justify-content:space-between; align-items:center;
+      padding:1.5rem 0; border-top:1px solid var(--border); color:var(--muted); font-size:14px;
+    }
+    .social-links{display:flex; gap:8px}
+
+    /* Modal */
+    .modal{position:fixed; inset:0; display:none; place-items:center; padding:20px; background:rgba(2,6,23,.55); z-index:100}
+    .modal[open]{display:grid}
+    .dialog{width:min(860px, 96vw); max-height:86vh; overflow:auto; background:var(--surface); border-radius:18px; padding:24px; box-shadow:var(--shadow-hard)}
+    .dialog header{display:flex; align-items:center; justify-content:space-between; margin-bottom:6px}
+    .dialog h3{font-size:24px; margin:0}
+    .close{width:38px; height:38px; border-radius:50%; border:1px solid var(--border); background:var(--surface); color:var(--muted); display:grid; place-items:center; cursor:pointer}
+    .bullets{list-style:none; padding:0; margin:16px 0}
+    .bullets li{padding-left:24px; position:relative; margin:8px 0; color:var(--muted)}
+    .bullets li::before{
+      content:'✓'; position:absolute; left:0; top:0;
+      color:var(--primary); font-weight:bold;
+    }
+
+    /* Responsive */
+    @media (max-width:960px){
+      .service-row, .service-row.reverse{grid-template-columns:1fr; text-align:center}
+      .service-row.reverse{direction:ltr}
+      .service-row .link{margin:16px auto 0}
+      .f-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:600px){
+      .f-grid{grid-template-columns:1fr}
+      .legal{flex-direction:column; gap:1rem}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav-wrap">
+      <a class="brand" href="#">
+        <span class="logo">AI</span>
+        <span>Asp Innovations</span>
+      </a>
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+          <svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <a href="#cta" class="btn primary">Start Your Project</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-aurora"></div>
+      <div class="container">
+        <h1 id="heroHeadline">
+          <span class="line">Architecting Your</span>
+          <br/>
+          <span class="line">Digital Future.</span>
+        </h1>
+        <p class="sub">We are a full-service digital agency that blends strategy, design, and engineering to build transformative experiences that drive business outcomes.</p>
+        <div class="cta-row">
+          <a href="#services" class="btn primary">Explore Our Services</a>
+          <a href="#cta" class="btn">Schedule a Call</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="services">
+      <div class="container">
+        <!-- 1. Web & Application Development -->
+        <div class="service-row">
+          <div class="service-media">
+            <div class="media-card">
+              <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1400&auto=format&fit=crop" alt="Abstract code on a screen">
+            </div>
+          </div>
+          <div class="service-content">
+            <span class="eyebrow">Development</span>
+            <h2>Web & Application Development</h2>
+            <p>We architect and engineer world-class web experiences. From lightning-fast marketing sites to complex enterprise applications, we blend cutting-edge technology with user-centric design to build platforms that perform, scale, and convert.</p>
+            <a href="#" class="link" data-open="dev">
+              Explore Development
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Branding & Visual Identity -->
+        <div class="service-row reverse">
+          <div class="service-media">
+            <div class="media-card">
+              <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=1400&auto=format&fit=crop" alt="A designer's moodboard for branding">
+            </div>
+          </div>
+          <div class="service-content">
+            <span class="eyebrow">Design</span>
+            <h2>Branding & Visual Identity</h2>
+            <p>A great brand is more than a logo—it’s a feeling. We dive deep into your company’s DNA to craft a compelling brand story and a scalable visual system that resonates with your audience and stands out in a crowded market.</p>
+            <a href="#" class="link" data-open="brand">
+              Explore Branding
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Ecommerce Solutions -->
+        <div class="service-row">
+          <div class="service-media">
+            <div class="media-card">
+              <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=1400&auto=format&fit=crop" alt="A person using a POS system for an ecommerce transaction">
+            </div>
+          </div>
+          <div class="service-content">
+            <span class="eyebrow">Commerce</span>
+            <h2>Ecommerce & Marketplace Solutions</h2>
+            <p>Turn browsers into loyal customers. We build powerful, conversion-optimized ecommerce platforms on Shopify and WooCommerce, complete with seamless payment integrations, automated marketing, and inventory management.</p>
+            <a href="#" class="link" data-open="ecom">
+              Explore Commerce
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. SEO & Performance Marketing -->
+        <div class="service-row reverse">
+          <div class="service-media">
+            <div class="media-card">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1400&auto=format&fit=crop" alt="Data analytics charts and graphs on a screen">
+            </div>
+          </div>
+          <div class="service-content">
+            <span class="eyebrow">Growth</span>
+            <h2>SEO & Performance Marketing</h2>
+            <p>Visibility is just the start. We drive qualified, high-intent traffic through a holistic approach to SEO, content marketing, and paid media. Every campaign is data-driven, meticulously tracked, and optimized for ROI.</p>
+            <a href="#" class="link" data-open="growth">
+              Explore Growth
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section id="cta">
+      <div class="container">
+        <div class="cta-section">
+          <h2>Ready to Build Your Digital Future?</h2>
+          <p>Let's have a conversation about your goals. We'll provide a transparent proposal with a clear roadmap, timelines, and pricing—no obligations.</p>
+          <a href="#" class="btn" id="openQuote">Schedule a Discovery Call</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="f-grid">
+        <div class="f-brand">
+          <a class="brand" href="#">
+            <span class="logo">AI</span>
+            <span>Asp Innovations</span>
+          </a>
+          <p>Architecting digital futures through strategy, design, and engineering.</p>
+        </div>
+        <div>
+          <h3 class="f-title">Services</h3>
+          <a href="#" class="f-link" data-open="dev">Development</a>
+          <a href="#" class="f-link" data-open="brand">Branding</a>
+          <a href="#" class="f-link" data-open="ecom">Ecommerce</a>
+          <a href="#" class="f-link" data-open="growth">Marketing</a>
+        </div>
+        <div>
+          <h3 class="f-title">Company</h3>
+          <a href="#" class="f-link">About Us</a>
+          <a href="#" class="f-link">Portfolio</a>
+          <a href="#" class="f-link">Blog</a>
+          <a href="#" class="f-link">Careers</a>
+        </div>
+        <div>
+          <h3 class="f-title">Stay Updated</h3>
+          <form class="newsletter">
+            <input type="email" placeholder="you@company.com" required>
+            <button class="btn primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="legal">
+        <span>© <span id="year"></span> Asp Innovations. All rights reserved.</span>
+        <div class="social-links">
+          <a href="#" class="f-link">LinkedIn</a>
+          <a href="#" class="f-link">Twitter</a>
+          <a href="#" class="f-link">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal" id="serviceModal" aria-hidden="true">
+    <div class="dialog">
+      <header>
+        <h3 id="modalTitle">Service Details</h3>
+        <button class="close" data-close-modal>&times;</button>
+      </header>
+      <p id="modalDesc" class="muted"></p>
+      <ul class="bullets" id="modalList"></ul>
+      <a href="#cta" class="btn primary" id="modalCta">Start a Project</a>
+    </div>
+  </div>
+
+  <script>
+    // --- DATA FOR MODAL ---
+    const SERVICES_DATA = {
+      dev: {
+        title: "Web & Application Development",
+        desc: "We build robust, scalable, and high-performance digital platforms.",
+        bullets: ["Custom Web Applications & SaaS", "Headless CMS & API-first Architecture", "Next.js, React, and Node.js Expertise", "Core Web Vitals & Performance Optimization", "Ongoing Maintenance & Support"]
+      },
+      brand: {
+        title: "Branding & Visual Identity",
+        desc: "We create unforgettable brands that tell a compelling story.",
+        bullets: ["Brand Strategy & Positioning Workshops", "Logo Design & Full Identity Systems", "UI/UX Design for Web & Mobile", "Scalable Design Systems & Component Libraries", "Marketing Collateral & Pitch Decks"]
+      },
+      ecom: {
+        title: "Ecommerce & Marketplace Solutions",
+        desc: "We architect ecommerce ecosystems that drive revenue.",
+        bullets: ["Shopify Plus & WooCommerce Development", "Conversion Rate Optimization (CRO)", "Subscription & Membership Models", "Payment Gateway & ERP Integrations", "Headless Commerce for Ultimate Flexibility"]
+      },
+      growth: {
+        title: "SEO & Performance Marketing",
+        desc: "We implement data-driven strategies to fuel sustainable growth.",
+        bullets: ["Technical SEO Audits & Implementation", "Content Strategy & Authority Building", "Google & Meta Paid Ad Campaigns", "Full-Funnel Analytics & Attribution", "Email Marketing & Automation"]
+      }
+    };
+
+    // --- HELPERS ---
+    const $ = (sel) => document.querySelector(sel);
+    const $$ = (sel) => document.querySelectorAll(sel);
+
+    // --- THEME TOGGLE ---
+    const themeBtn = $('#themeToggle');
+    const themeIcon = $('#themeIcon');
+    const sunIcon = `<path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>`;
+    const moonIcon = `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>`;
+
+    const setTheme = (theme) => {
+      document.documentElement.setAttribute('data-theme', theme);
+      themeIcon.innerHTML = theme === 'dark' ? sunIcon : moonIcon;
+      localStorage.setItem('theme', theme);
+    };
+
+    themeBtn.addEventListener('click', () => {
+      const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      setTheme(newTheme);
+    });
+    // Set initial theme
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+
+
+    // --- HERO TEXT ANIMATION ---
+    const headline = $('#heroHeadline');
+    const lines = headline.querySelectorAll('.line');
+    lines.forEach(line => {
+      line.innerHTML = line.textContent.split('').map(char => `<span class="reveal-char">${char === ' ' ? '&nbsp;' : char}</span>`).join('');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const chars = entry.target.querySelectorAll('.reveal-char');
+          chars.forEach((char, i) => {
+            setTimeout(() => {
+              char.style.opacity = '1';
+              char.style.transform = 'none';
+            }, i * 30);
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    observer.observe(headline);
+
+
+    // --- SCROLL-TRIGGERED ANIMATIONS FOR SECTIONS ---
+    const fxObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          fxObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    $$('.service-media, .service-content').forEach(el => fxObserver.observe(el));
+
+
+    // --- MODAL LOGIC ---
+    const modal = $('#serviceModal');
+    const openModal = (key) => {
+      const data = SERVICES_DATA[key];
+      if (!data) return;
+      $('#modalTitle').textContent = data.title;
+      $('#modalDesc').textContent = data.desc;
+      $('#modalList').innerHTML = data.bullets.map(item => `<li>${item}</li>`).join('');
+      modal.setAttribute('open', '');
+    };
+    const closeModal = () => modal.removeAttribute('open');
+
+    $$('[data-open]').forEach(el => el.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal(e.currentTarget.dataset.open);
+    }));
+    $$('[data-close-modal]').forEach(el => el.addEventListener('click', closeModal));
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    $('#modalCta').addEventListener('click', closeModal);
+
+
+    // --- QUOTE MODAL (reusing the same modal for simplicity) ---
+    $('#openQuote').addEventListener('click', (e) => {
+      e.preventDefault();
+      alert('This would open a dedicated "Request a Quote" form/modal.');
+    });
+
+    // --- FOOTER YEAR ---
+    $('#year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

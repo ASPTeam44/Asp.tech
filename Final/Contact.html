@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - ASP Innovations</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before {
+content: "\f3c2";
+}
+</style>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#3B82F6',
+secondary: '#1E40AF'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+</head>
+<body class="bg-gray-50">
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <nav class="w-full px-6 py-4">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                        <img src="newlogo.png" alt="Description of image">
+
+                    </div>
+                    <span class="text-2xl font-bold text-gray-900">Asp Innovations</span>
+                </div>
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary font-medium">Home</a>
+                    <a href="About.html" class="text-gray-700 hover:text-primary font-medium">About Us</a>
+                    <a href="#services" class="text-gray-700 hover:text-primary font-medium">Services</a>
+                    <a href="Portfolio.html" class="text-gray-700 hover:text-primary font-medium">Portfolio</a>
+                    <a href="#blog" class="text-gray-700 hover:text-primary font-medium">Blog</a>
+                    <a href="Contact.html" class="text-gray-700 hover:text-primary font-medium">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="Request.html" data-readdy="true">
+                        <button class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-secondary transition-colors whitespace-nowrap">
+                            Request a Quote
+                        </button>
+                    </a>
+                    <button class="lg:hidden w-8 h-8 flex items-center justify-center" id="mobile-menu-btn">
+                        <i class="ri-menu-line text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div class="lg:hidden hidden bg-white border-t" id="mobile-menu">
+            <div class="px-6 py-4 space-y-4">
+                <a href="#home" class="block text-gray-700 hover:text-primary font-medium">Home</a>
+                <a href="#about" class="block text-gray-700 hover:text-primary font-medium">About Us</a>
+                <a href="#services" class="block text-gray-700 hover:text-primary font-medium">Services</a>
+                <a href="#portfolio" class="block text-gray-700 hover:text-primary font-medium">Portfolio</a>
+                <a href="#blog" class="block text-gray-700 hover:text-primary font-medium">Blog</a>
+                <a href="#contact" class="block text-gray-700 hover:text-primary font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+
+<main class="pt-20">
+<section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden" style="background-image: url('https://readdy.ai/api/search-image?query=professional%20customer%20service%20team%20in%20modern%20office%20environment%2C%20business%20communication%20and%20support%20concept%2C%20clean%20corporate%20setting%20with%20blue%20and%20white%20color%20scheme%2C%20technology%20company%20headquarters%2C%20professional%20consultation%20atmosphere%2C%20modern%20workspace%20design%2C%20customer%20engagement%20visualization&width=1920&height=800&seq=contact-hero&orientation=landscape'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-gradient-to-r from-white/95 to-white/70"></div>
+<div class="relative z-10 w-full px-6">
+<div class="max-w-6xl mx-auto">
+<div class="max-w-2xl">
+<h1 class="text-5xl font-bold text-gray-900 mb-6 leading-tight">Contact Us</h1>
+<p class="text-xl text-gray-600 mb-8 leading-relaxed">Ready to transform your business with innovative technology solutions? Get in touch with our expert team today.</p>
+<div class="grid grid-cols-3 gap-8 mb-8">
+<div class="text-center">
+<div class="text-3xl font-bold text-primary">24/7</div>
+<div class="text-sm text-gray-600">Support Available</div>
+</div>
+<div class="text-center">
+<div class="text-3xl font-bold text-primary">< 2hrs</div>
+<div class="text-sm text-gray-600">Response Time</div>
+</div>
+<div class="text-center">
+<div class="text-3xl font-bold text-primary">Global</div>
+<div class="text-sm text-gray-600">Reach</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-20 bg-white">
+<div class="max-w-6xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-lg transition-all">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<div class="w-8 h-8 flex items-center justify-center text-primary text-2xl">
+<i class="ri-phone-line"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Call Us</h3>
+<p class="text-gray-600 mb-4">Speak directly with our experts</p>
+<p class="text-lg font-semibold text-primary mb-4">+1 (555) 123-4567</p>
+<button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-secondary transition-colors whitespace-nowrap">Call Now</button>
+</div>
+
+<div class="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-lg transition-all">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<div class="w-8 h-8 flex items-center justify-center text-primary text-2xl">
+<i class="ri-mail-line"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Email Us</h3>
+<p class="text-gray-600 mb-4">Send us a detailed message</p>
+<p class="text-lg font-semibold text-primary mb-4">contact@aspinnovations.com</p>
+<button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-secondary transition-colors whitespace-nowrap">Send Email</button>
+</div>
+
+<div class="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-lg transition-all">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<div class="w-8 h-8 flex items-center justify-center text-primary text-2xl">
+<i class="ri-map-pin-line"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Visit Us</h3>
+<p class="text-gray-600 mb-4">Come to our headquarters</p>
+<p class="text-lg font-semibold text-primary mb-4">123 Innovation Drive</p>
+<button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-secondary transition-colors whitespace-nowrap">Get Directions</button>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-20 bg-gray-50">
+<div class="max-w-6xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div>
+<h2 class="text-4xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
+<p class="text-gray-600 mb-8">Fill out the form below and we'll get back to you within 24 hours.</p>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+<input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-sm" placeholder="John">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+<input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-sm" placeholder="Doe">
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+<input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-sm" placeholder="john.doe@company.com">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Company Name</label>
+<input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-sm" placeholder="Your Company">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Inquiry Type</label>
+<div class="relative">
+<button id="inquiry-select" type="button" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-sm text-left flex items-center justify-between">
+<span>General Inquiry</span>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+</button>
+<div id="inquiry-dropdown" class="absolute top-full left-0 mt-2 w-full bg-white border border-gray-200 rounded-lg shadow-lg z-10 hidden">
+<a href="#" class="block px-4 py-2 hover:bg-gray-50 transition-colors">General Inquiry</a>
+<a href="#" class="block px-4 py-2 hover:bg-gray-50 transition-colors">Sales</a>
+<a href="#" class="block px-4 py-2 hover:bg-gray-50 transition-colors">Technical Support</a>
+<a href="#" class="block px-4 py-2 hover:bg-gray-50 transition-colors">Partnership</a>
+<a href="#" class="block px-4 py-2 hover:bg-gray-50 transition-colors">Career</a>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+<textarea rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary text-sm" placeholder="Tell us about your project requirements..."></textarea>
+</div>
+<button type="submit" class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-secondary transition-colors whitespace-nowrap w-full">Send Message</button>
+</form>
+</div>
+
+<div class="space-y-8">
+<div>
+<h3 class="text-2xl font-semibold text-gray-900 mb-6">Business Hours</h3>
+<div class="space-y-4">
+<div class="flex justify-between items-center py-2 border-b border-gray-200">
+<span class="text-gray-700">Monday - Friday</span>
+<span class="text-gray-900 font-medium">9:00 AM - 6:00 PM EST</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-gray-200">
+<span class="text-gray-700">Saturday</span>
+<span class="text-gray-900 font-medium">10:00 AM - 4:00 PM EST</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-gray-200">
+<span class="text-gray-700">Sunday</span>
+<span class="text-gray-900 font-medium">Closed</span>
+</div>
+<div class="flex justify-between items-center py-2">
+<span class="text-gray-700">Emergency Support</span>
+<span class="text-primary font-medium">24/7 Available</span>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-2xl font-semibold text-gray-900 mb-6">What to Expect</h3>
+<div class="space-y-4">
+<div class="flex items-start space-x-3">
+<div class="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center mt-1">
+<div class="w-3 h-3 flex items-center justify-center text-primary text-xs">
+<i class="ri-check-line"></i>
+</div>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Quick Response</h4>
+<p class="text-gray-600 text-sm">We respond to all inquiries within 2 hours during business hours</p>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<div class="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center mt-1">
+<div class="w-3 h-3 flex items-center justify-center text-primary text-xs">
+<i class="ri-check-line"></i>
+</div>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Expert Consultation</h4>
+<p class="text-gray-600 text-sm">Connect with our technical experts for detailed discussions</p>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<div class="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center mt-1">
+<div class="w-3 h-3 flex items-center justify-center text-primary text-xs">
+<i class="ri-check-line"></i>
+</div>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Custom Solutions</h4>
+<p class="text-gray-600 text-sm">Tailored recommendations based on your specific needs</p>
+</div>
+</div>
+</div>
+</div>
+
+<div>
+<h3 class="text-2xl font-semibold text-gray-900 mb-6">Frequently Asked</h3>
+<div class="space-y-3">
+<a href="#" class="block text-primary hover:text-secondary transition-colors">How long does a typical project take?</a>
+<a href="#" class="block text-primary hover:text-secondary transition-colors">What industries do you serve?</a>
+<a href="#" class="block text-primary hover:text-secondary transition-colors">Do you offer ongoing support?</a>
+<a href="#" class="block text-primary hover:text-secondary transition-colors">What are your pricing models?</a>
+<a href="#" class="block text-primary hover:text-secondary transition-colors">Can you work with existing systems?</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-20 bg-white">
+<div class="max-w-6xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Our Office Locations</h2>
+<p class="text-xl text-gray-600">Visit us at any of our global offices</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all">
+<div class="w-full h-48 bg-gray-300 rounded-lg mb-6 overflow-hidden" style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-size: cover; background-position: center;"></div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">New York Headquarters</h3>
+<div class="space-y-3 text-gray-600 mb-6">
+<div class="flex items-center space-x-3">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-map-pin-line"></i>
+</div>
+<span>123 Innovation Drive, NY 10001</span>
+</div>
+<div class="flex items-center space-x-3">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-phone-line"></i>
+</div>
+<span>+1 (555) 123-4567</span>
+</div>
+<div class="flex items-center space-x-3">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-time-line"></i>
+</div>
+<span>Mon-Fri: 9AM-6PM EST</span>
+</div>
+</div>
+<button class="text-primary font-medium hover:text-secondary transition-colors flex items-center">
+Get Directions
+<div class="w-4 h-4 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</button>
+</div>
+<div class="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all">
+<div class="w-full h-48 bg-gray-300 rounded-lg mb-6 overflow-hidden" style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-size: cover; background-position: center;"></div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">San Francisco Office</h3>
+<div class="space-y-3 text-gray-600 mb-6">
+<div class="flex items-center space-x-3">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-map-pin-line"></i>
+</div>
+<span>456 Tech Boulevard, SF 94105</span>
+</div>
+<div class="flex items-center space-x-3">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-phone-line"></i>
+</div>
+<span>+1 (555) 234-5678</span>
+</div>
+<div class="flex items-center space-x-3">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-time-line"></i>
+</div>
+<span>Mon-Fri: 9AM-6PM PST</span>
+</div>
+</div>
+<button class="text-primary font-medium hover:text-secondary transition-colors flex items-center">
+Get Directions
+<div class="w-4 h-4 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</button>
+</div>
+<div class="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all">
+<div class="w-full h-48 bg-gray-300 rounded-lg mb-6 overflow-hidden" style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-size: cover; background-position: center;"></div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">London Office</h3>
+<div class="space-y-3 text-gray-600 mb-6">
+<div class="flex items-center space-x-3">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-map-pin-line"></i>
+</div>
+<span>789 Canary Wharf, London E14 5AB</span>
+</div>
+<div class="flex items-center space-x-3">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-phone-line"></i>
+</div>
+<span>+44 20 7123 4567</span>
+</div>
+<div class="flex items-center space-x-3">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-time-line"></i>
+</div>
+<span>Mon-Fri: 9AM-6PM GMT</span>
+</div>
+</div>
+<button class="text-primary font-medium hover:text-secondary transition-colors flex items-center">
+Get Directions
+<div class="w-4 h-4 flex items-center justify-center ml-2">
+<i class="ri-arrow-right-line"></i>
+</div>
+</button>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-20 bg-gray-50">
+<div class="max-w-6xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Contact by Department</h2>
+<p class="text-xl text-gray-600">Reach the right team for your specific needs</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white rounded-2xl p-8 hover:shadow-lg transition-all">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<div class="w-8 h-8 flex items-center justify-center text-primary text-2xl">
+<i class="ri-customer-service-line"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">General Inquiries</h3>
+<p class="text-gray-600 mb-6">Questions about our services, company information, or general support.</p>
+<div class="space-y-2 text-sm text-gray-600 mb-6">
+<div>Email: info@aspinnovations.com</div>
+<div>Phone: +1 (555) 123-4567</div>
+<div>Response: Within 2 hours</div>
+</div>
+<button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-secondary transition-colors whitespace-nowrap w-full">Contact General</button>
+</div>
+
+<div class="bg-white rounded-2xl p-8 hover:shadow-lg transition-all">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<div class="w-8 h-8 flex items-center justify-center text-primary text-2xl">
+<i class="ri-money-dollar-circle-line"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Sales Team</h3>
+<p class="text-gray-600 mb-6">Ready to start a project? Get quotes, discuss requirements, and explore solutions.</p>
+<div class="space-y-2 text-sm text-gray-600 mb-6">
+<div>Email: sales@aspinnovations.com</div>
+<div>Phone: +1 (555) 234-5678</div>
+<div>Response: Within 1 hour</div>
+</div>
+<button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-secondary transition-colors whitespace-nowrap w-full">Contact Sales</button>
+</div>
+
+<div class="bg-white rounded-2xl p-8 hover:shadow-lg transition-all">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<div class="w-8 h-8 flex items-center justify-center text-primary text-2xl">
+<i class="ri-tools-line"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Technical Support</h3>
+<p class="text-gray-600 mb-6">Need help with existing systems? Our technical team is here to assist you.</p>
+<div class="space-y-2 text-sm text-gray-600 mb-6">
+<div>Email: support@aspinnovations.com</div>
+<div>Phone: +1 (555) 345-6789</div>
+<div>Response: 24/7 Available</div>
+</div>
+<button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-secondary transition-colors whitespace-nowrap w-full">Contact Support</button>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-20 bg-white">
+<div class="max-w-6xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Connect With Us</h2>
+<p class="text-xl text-gray-600">Follow us on social media for updates and insights</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-primary hover:text-white transition-all cursor-pointer">
+<div class="w-8 h-8 flex items-center justify-center text-primary hover:text-white text-2xl">
+<i class="ri-linkedin-fill"></i>
+</div>
+</div>
+<h3 class="font-semibold text-gray-900 mb-2">LinkedIn</h3>
+<p class="text-sm text-gray-600 mb-3">Professional updates and industry insights</p>
+<p class="text-xs text-primary">@aspinnovations</p>
+</div>
+
+<div class="text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-primary hover:text-white transition-all cursor-pointer">
+<div class="w-8 h-8 flex items-center justify-center text-primary hover:text-white text-2xl">
+<i class="ri-twitter-fill"></i>
+</div>
+</div>
+<h3 class="font-semibold text-gray-900 mb-2">Twitter</h3>
+<p class="text-sm text-gray-600 mb-3">Latest news and tech trends</p>
+<p class="text-xs text-primary">@aspinnovations</p>
+</div>
+
+<div class="text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-primary hover:text-white transition-all cursor-pointer">
+<div class="w-8 h-8 flex items-center justify-center text-primary hover:text-white text-2xl">
+<i class="ri-github-fill"></i>
+</div>
+</div>
+<h3 class="font-semibold text-gray-900 mb-2">GitHub</h3>
+<p class="text-sm text-gray-600 mb-3">Open source projects and code</p>
+<p class="text-xs text-primary">@aspinnovations</p>
+</div>
+
+<div class="text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-primary hover:text-white transition-all cursor-pointer">
+<div class="w-8 h-8 flex items-center justify-center text-primary hover:text-white text-2xl">
+<i class="ri-youtube-fill"></i>
+</div>
+</div>
+<h3 class="font-semibold text-gray-900 mb-2">YouTube</h3>
+<p class="text-sm text-gray-600 mb-3">Technical tutorials and demos</p>
+<p class="text-xs text-primary">@aspinnovations</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-20 bg-primary">
+<div class="max-w-6xl mx-auto px-6">
+<div class="text-center mb-12">
+<h2 class="text-4xl font-bold text-white mb-4">Schedule a Consultation</h2>
+<p class="text-xl text-blue-100">Book a free 30-minute consultation with our experts</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+<h3 class="text-2xl font-semibold text-white mb-6">Book Your Session</h3>
+<form class="space-y-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<input type="text" placeholder="First Name" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white text-sm">
+</div>
+<div>
+<input type="text" placeholder="Last Name" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white text-sm">
+</div>
+</div>
+<div>
+<input type="email" placeholder="Email Address" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white text-sm">
+</div>
+<div>
+<input type="text" placeholder="Company Name" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white text-sm">
+</div>
+<div>
+<div class="relative">
+<button id="consultation-type" type="button" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:border-white text-sm text-left flex items-center justify-between">
+<span>Select Consultation Type</span>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+</button>
+<div id="consultation-dropdown" class="absolute top-full left-0 mt-2 w-full bg-white border border-gray-200 rounded-lg shadow-lg z-10 hidden">
+<a href="#" class="block px-4 py-2 hover:bg-gray-50 transition-colors text-gray-700">Digital Transformation</a>
+<a href="#" class="block px-4 py-2 hover:bg-gray-50 transition-colors text-gray-700">Cloud Solutions</a>
+<a href="#" class="block px-4 py-2 hover:bg-gray-50 transition-colors text-gray-700">AI & Machine Learning</a>
+<a href="#" class="block px-4 py-2 hover:bg-gray-50 transition-colors text-gray-700">Cybersecurity</a>
+<a href="#" class="block px-4 py-2 hover:bg-gray-50 transition-colors text-gray-700">Custom Development</a>
+</div>
+</div>
+</div>
+<div>
+<textarea placeholder="Brief description of your project" rows="3" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white text-sm"></textarea>
+</div>
+<button type="submit" class="bg-white text-primary px-8 py-3 !rounded-button font-semibold hover:bg-gray-100 transition-colors whitespace-nowrap w-full">Schedule Consultation</button>
+</form>
+</div>
+</div>
+<div>
+<div class="space-y-8">
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+<div class="w-6 h-6 flex items-center justify-center text-white">
+<i class="ri-calendar-check-line"></i>
+</div>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-1">Free 30-Minute Session</h4>
+<p class="text-blue-100">No commitment, just valuable insights</p>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+<div class="w-6 h-6 flex items-center justify-center text-white">
+<i class="ri-user-star-line"></i>
+</div>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-1">Expert Guidance</h4>
+<p class="text-blue-100">Connect with our senior consultants</p>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+<div class="w-6 h-6 flex items-center justify-center text-white">
+<i class="ri-lightbulb-line"></i>
+</div>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-1">Custom Solutions</h4>
+<p class="text-blue-100">Tailored recommendations for your needs</p>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+<div class="w-6 h-6 flex items-center justify-center text-white">
+<i class="ri-time-line"></i>
+</div>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-1">Flexible Scheduling</h4>
+<p class="text-blue-100">Available across all time zones</p>
+</div>
+</div>
+<div class="pt-6">
+<div class="bg-white/10 rounded-lg p-4">
+<h4 class="text-white font-semibold mb-2">Available Time Slots</h4>
+<div class="grid grid-cols-2 gap-2 text-sm">
+<div class="text-blue-100">Mon-Fri: 9AM-6PM EST</div>
+<div class="text-blue-100">Sat: 10AM-4PM EST</div>
+<div class="text-blue-100">Evening slots available</div>
+<div class="text-blue-100">Weekend consultations</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="bg-gray-900 text-white py-16">
+<div class="max-w-6xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<div>
+<div class="font-['Pacifico'] text-2xl text-primary mb-4">logo</div>
+<p class="text-gray-400 mb-6">Pioneering technology solutions that drive business transformation and innovation.</p>
+<div class="flex space-x-4">
+<div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-linkedin-fill"></i>
+</div>
+</div>
+<div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-twitter-fill"></i>
+</div>
+</div>
+<div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-facebook-fill"></i>
+</div>
+</div>
+<div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-instagram-fill"></i>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Company</h3>
+<ul class="space-y-3 text-gray-400">
+<li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+<li><a href="#" class="hover:text-white transition-colors">Our Team</a></li>
+<li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+<li><a href="#" class="hover:text-white transition-colors">News & Updates</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Services</h3>
+<ul class="space-y-3 text-gray-400">
+<li><a href="#" class="hover:text-white transition-colors">Digital Transformation</a></li>
+<li><a href="#" class="hover:text-white transition-colors">Cloud Solutions</a></li>
+<li><a href="#" class="hover:text-white transition-colors">AI & Machine Learning</a></li>
+<li><a href="#" class="hover:text-white transition-colors">Cybersecurity</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+<p class="text-gray-400 mb-4">Stay updated with our latest insights and innovations.</p>
+<div class="flex">
+<input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-primary text-white text-sm">
+<button class="bg-primary px-6 py-2 rounded-r-lg hover:bg-secondary transition-colors whitespace-nowrap">Subscribe</button>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm">© 2024 ASP Innovations. All rights reserved.</p>
+<div class="flex space-x-6 mt-4 md:mt-0">
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+<script id="dropdown-functionality">
+document.addEventListener('DOMContentLoaded', function() {
+const inquirySelect = document.getElementById('inquiry-select');
+const inquiryDropdown = document.getElementById('inquiry-dropdown');
+const consultationSelect = document.getElementById('consultation-type');
+const consultationDropdown = document.getElementById('consultation-dropdown');
+function setupDropdown(select, dropdown) {
+if (select && dropdown) {
+select.addEventListener('click', function() {
+dropdown.classList.toggle('hidden');
+});
+
+dropdown.addEventListener('click', function(e) {
+if (e.target.tagName === 'A') {
+e.preventDefault();
+select.querySelector('span').textContent = e.target.textContent;
+dropdown.classList.add('hidden');
+}
+});
+}
+}
+
+setupDropdown(inquirySelect, inquiryDropdown);
+setupDropdown(consultationSelect, consultationDropdown);
+document.addEventListener('click', function(e) {
+if (inquirySelect && inquiryDropdown && !inquirySelect.contains(e.target) && !inquiryDropdown.contains(e.target)) {
+inquiryDropdown.classList.add('hidden');
+}
+if (consultationSelect && consultationDropdown && !consultationSelect.contains(e.target) && !consultationDropdown.contains(e.target)) {
+consultationDropdown.classList.add('hidden');
+}
+});
+});
+</script>
+
+<script id="form-handling">
+document.addEventListener('DOMContentLoaded', function() {
+const forms = document.querySelectorAll('form');
+forms.forEach(form => {
+form.addEventListener('submit', function(e) {
+e.preventDefault();
+const submitButton = form.querySelector('button[type="submit"]') || form.querySelector('button');
+const originalText = submitButton.textContent;
+submitButton.textContent = 'Sending...';
+submitButton.disabled = true;
+
+setTimeout(() => {
+submitButton.textContent = 'Message Sent!';
+setTimeout(() => {
+submitButton.textContent = originalText;
+submitButton.disabled = false;
+form.reset();
+}, 2000);
+}, 1500);
+});
+});
+});
+</script>
+
+<script id="smooth-animations">
+document.addEventListener('DOMContentLoaded', function() {
+const cards = document.querySelectorAll('.bg-gray-50, .bg-white');
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach((entry, index) => {
+if (entry.isIntersecting) {
+setTimeout(() => {
+entry.target.style.opacity = '1';
+entry.target.style.transform = 'translateY(0)';
+}, index * 100);
+}
+});
+}, observerOptions);
+
+cards.forEach(card => {
+card.style.opacity = '0';
+card.style.transform = 'translateY(20px)';
+card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+observer.observe(card);
+});
+});
+</script>
+
+<script id="social-interactions">
+document.addEventListener('DOMContentLoaded', function() {
+const socialIcons = document.querySelectorAll('.w-16.h-16, .w-10.h-10');
+socialIcons.forEach(icon => {
+icon.addEventListener('click', function() {
+this.style.transform = 'scale(0.95)';
+setTimeout(() => {
+this.style.transform = 'scale(1)';
+}, 150);
+});
+});
+});
+</script>
+</body>
+</html>
